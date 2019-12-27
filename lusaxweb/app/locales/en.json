@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "projects",
+    "about": "About",
+    "contact": "Contact Us"
+  },
+  "home": {
+    "outstanding": "Outstanding",
+    "news": "News",
+    "slide1":[
+      {
+        "name": "Game of Thrones",
+        "text": "New Awards Interaction",
+        "key": 0
+      },
+      {
+        "name": "Vuesax Framework",
+        "text": "Framework Components for Vuejs",
+        "key": 1
+      },
+      {
+        "name": "Cyberpunk 2077",
+        "text": "Comming Soon in Behance",
+        "key": 2
+      }
+    ],
+    "slide2":[
+      {
+        "name": "Mockui",
+        "text": "Mockups Designer Generator",
+        "key": 0
+      },
+      {
+        "name": "Vuesax 3K",
+        "text": "Awesome 3k Stars Github",
+        "key": 1
+      },
+      {
+        "name": "Instagram",
+        "text": "Instagram New Post",
+        "key": 2
+      },
+      {
+        "name": "Vuesax",
+        "text": "Vuesax Coming Soon v4.0 🎉",
+        "key": 3
+      }
+    ],
+    "title1": "We create <br> experiences",
+    "title2": "Unique <br> Projects",
+    "item1": {
+      "title": "Responsive design",
+      "text": "We get interfaces for any user-friendly device"
+    },
+    "item2": {
+      "title": "Maximum Adaptability",
+      "text": "Creative solutions for all types of projects. App, Web, Dashboard, Software"
+    },
+    "item3": {
+      "title": "Style",
+      "text": "Capture the essence in each project and give it life."
+    },
+    "view": "View projects",
+    "footer": {
+      "social": "Social",
+      "startup": "Startup",
+      "contact": "Contact Us"
+    }
+  },
+  "projects":{
+    "soon": "Comming Soon",
+    "view": "View Project"
+  },
+  "about":{
+    "next": "Next",
+    "social": "Social",
+    "favorites": {
+      "red": "Red",
+      "color": "Color",
+      "movies": "Movies",
+      "games": "Games",
+      "series": "Series",
+      "characters": "Characters",
+      "soundtracks": "Soundtracks"
+    },
+    "titles":{
+      "intro": "Intro",
+      "hi": "hi",
+      "specialties": "Specialties",
+      "awards": "Awards",
+      "favorites": "Favorites",
+      "family": "Family <br> Team"
+    },
+    "lusaxweb": {
+      "intro": "We are a design and development agency formed by a family team with our own projects for the love of what we do, we create complete solutions. <br> We are in constant progress in the three areas in which we complement Ui Ux Design, Front end and Back end, we see our company as the union of our greatest passion to create",
+      "item1": "We are in a modern and competitive era, therefore a visually attractive user interface is vital, adding a plus to your product or website, thus achieving that your users get the message in a pleasant and effective way"
+    },
+    "manuel": {
+      "intro": "My name is Manuel Rovira and I am a wew designer and a very passionate designer, I always try to do different and creative things that change what I have already seen in design.",
+      "item1": "My styles are all styles, since I do not like to be pigeonholed in a single style, I like challenges so I create concepts in my free time where I can express all my creativity in interesting interfaces and unique user experiences."
+    },
+    "luis": {
+      "intro": "Frontend full stack programmer, with experience in web technologies such as javascript, css and html, creator of frameworks and libraries for the open source community.",
+      "item1": "Create new libraries or frameworks for the community, I have experience and enthusiasm for the entire ecosystem of the frontend and always keep up with new technologies"
+    },
+    "luismanuel": {
+      "intro": "Co-founder - Technology Manager at Lusaxweb, back end programmer with several years of experience",
+      "item1": "Creation of software and new projects, Personnel management, programming back end"
+    }
+  },
+  "contact":{
+    "message": "Message",
+    "send": "Send",
+    "success": "The message was sent <b>Successfully</b>, thank you for contacting us",
+    "invalid": "The email is invalid"
+  }
+}

@@ -1,0 +1,120 @@
+.vs-alert
+  --vs-color: vs-var('primary')
+  --vs-text: vs-var('primary')
+
+  width: 100%
+  position relative
+  background: vs-color('color', .1)
+  border-left: 2px solid vs-color('color',1)
+  font-size: .8rem
+  border-radius: 0px $vs-alert-radius $vs-alert-radius $vs-alert-radius
+  color vs-color('text',1)
+  transition: $vs-alert-transition, height .25s ease
+  overflow hidden
+
+  + .vs-alert
+    margin-top: 10px
+
+  &.vs-alert--closable
+    header
+      padding-right: 20px
+
+  &:not(&--content-hidden)
+    header
+     + div
+      padding-top: 10px
+
+
+  &--content-hidden
+    cursor pointer
+
+    header
+      display: flex
+      align-items: center
+      justify-content: space-between
+      svg
+        fill vs-color('color',1)
+        transition: all .25s ease
+        max-width 22px
+
+    &-open
+      header
+        + div
+          padding-top: 10px
+      svg
+        transform: rotate(-180deg)
+
+  header
+    font-size: 1rem
+    transition: all .25s ease
+    font-weight 600
+    z-index 10
+    position relative
+    + div
+      overflow hidden
+      transition: all .25s ease
+
+
+  &--content__footer
+    .vs-alert__content
+      padding-right: 10px
+      padding-bottom: 0px
+
+  footer
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    z-index 10
+    position relative
+    border-top: 1px solid vs-color('color',.05)
+    padding: 10px
+
+  &--two__content
+    .vs-alert__content__text
+      align-self: flex-start
+      + .vs-alert__content__text
+        border-left: 1px solid vs-color('color',.1)
+
+.vs-alert__content
+  // padding: 20px
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  z-index 10
+  position relative
+
+
+.vs-alert__icon
+  background: vs-color('color',.08)
+  padding: 18px
+  border-radius: 0px $vs-alert-radius $vs-alert-radius 0px
+  z-index 10
+  position relative
+  i
+    font-size: 1.3rem
+  +
+    .vs-alert__content__text
+      margin-left 20px
+      padding-left: 10px
+
+.vs-alert__content__text
+  width: 100%
+  padding: 20px
+
+.vs-alert__close
+  position absolute
+  top 0px
+  right 0px
+  padding: 10px
+  color vs-color('color')
+  opacity .6
+  transition: $vs-alert-transition
+  z-index 200
+  cursor pointer
+  &:hover
+    opacity 1
+  svg
+    fill vs-color('color')
+    max-width 22px
+
+

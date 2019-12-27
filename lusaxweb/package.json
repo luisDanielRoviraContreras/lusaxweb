@@ -1,0 +1,32 @@
+{
+  "name": "lusaxweb-next",
+  "version": "1.5.0",
+  "description": "Digital creative agency. Digital agency specializing in web design and programming, ui ux design and applications",
+  "author": "lusaxweb",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "sh deploy.sh"
+  },
+  "dependencies": {
+    "@nuxtjs/pwa": "^3.0.0-beta.16",
+    "cross-env": "^5.2.0",
+    "dateformat": "^3.0.3",
+    "firebase": "^5.9.2",
+    "gsap": "^2.1.1",
+    "hover-effect": "^1.0.0",
+    "material-design-icons": "^3.0.1",
+    "nuxt": "^2.4.0",
+    "nuxt-device-detect": "^1.1.5",
+    "vue-dragscroll": "^1.8.3",
+    "vue-i18n": "^8.11.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2"
+  }
+}

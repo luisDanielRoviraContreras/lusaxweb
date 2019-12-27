@@ -1,0 +1,493 @@
+.vs-button
+  /*
+  * Colores del componente con variables css
+  */
+  --vs-color: vs-var('primary')
+  --vs-text-color: vs-var('color')
+  --vs-color-darken: vs-var('primary')
+  --vs-color-rotate: vs-var('primary')
+
+  border-radius: $vs-button-radius
+  background: transparent
+
+  transition: $vs-button-transition
+  position relative
+  display: block
+  background: vs-color('color',1)
+  border 0px
+  font-size: $vs-button-font-size
+  box-sizing: border-box
+  cursor pointer
+  color rgb(255,255,255)
+  overflow hidden
+  &:disabled
+    opacity .2 !important
+    pointer-events: none
+    user-select none
+    box-shadow: 0px 0px 0px 0px vs-color('color',0) !important
+    transform: translate(0) !important
+  .vs-button__content
+    position relative
+    display: block
+    pointer-events: none
+    color inherit
+    z-index 200
+    overflow hidden
+    height auto
+    padding: $vs-button-padding-y + 2px $vs-button-padding-x + 2px
+  i
+    margin-right: 2px
+    margin-left: 2px
+    transform: translate(0,1px)
+
+  &--animate
+    .vs-button__animate
+      transform: translate(100%)
+    .vs-button__content,.vs-button__animate
+        transition: transform .25s ease
+    &:hover
+      .vs-button__content
+        transform: translate(-100%)
+      .vs-button__animate
+        transform: translate(0)
+  &--animate&--vertical
+    .vs-button__animate
+      transform translate(0,100%)
+    &:hover
+      .vs-button__content
+        transform: translate(0,-100%)
+      .vs-button__animate
+        transform: translate(0)
+  &--animate&--fade
+    .vs-button__animate
+      transform scale(.2)
+      opacity 0
+    &:hover
+      .vs-button__content
+        transform scale(1.4)
+        opacity 0
+      .vs-button__animate
+        opacity 1
+        transform scale(1)
+  &--animate&--rotate
+    .vs-button__animate
+      transform rotate(180deg)
+      opacity 0
+    &:hover
+      .vs-button__content
+        transform rotate(-180deg)
+        opacity 0
+      .vs-button__animate
+        opacity 1
+        transform rotate(0deg)
+
+
+  &--block
+    width: 100%
+
+  &--upload,&--loading
+    cursor default
+    pointer-events: none
+    user-select none
+
+  &--default
+    &:hover
+      background: vs-color('color', 1)
+      box-shadow: 0px 15px 15px -10px vs-color('color',.4)
+      transform: translate(0,-2px)
+    &:active
+      transform: translate(0,-1px) !important
+      opacity .8
+      box-shadow: 0px 13px 15px -10px vs-color('color',.4)
+  &--default&__active
+    box-shadow: 0px 17px 15px -10px vs-color('color',.4)
+    transform: translate(0,-4px) !important
+
+  /*
+   * Size
+   */
+  &--xlarge
+    font-size: $vs-button-font-size * 1.3 !important
+    border-radius: 20px
+    .vs-button__content
+      padding: $vs-button-padding-y * 2.4 $vs-button-padding-x * 2.4 !important
+  &--large
+    font-size: $vs-button-font-size * 1.15 !important
+    border-radius: 14px
+    .vs-button__content
+      padding: $vs-button-padding-y + 2px * 2 $vs-button-padding-x + 2px * 2 !important
+  &--small
+    font-size: ($vs-button-font-size / 1.3) !important
+    border-radius: 8px
+    .vs-button__content
+      padding: ($vs-button-padding-y / 1.4) ($vs-button-padding-x / 1.4) !important
+    .vs-button__loading
+      &:after, &:before
+        width: 10px
+        height 10px
+        border-width: 2px
+  &--mini
+    font-size: ($vs-button-font-size / 1.7) !important
+    border-radius: 6px
+    .vs-button__content
+      padding: ($vs-button-padding-y / 1.8) ($vs-button-padding-x / 1.8) !important
+    .vs-button__loading
+      &:after, &:before
+        width: 8px
+        height 8px
+        border-width: 1px
+
+  &--icon
+    width: 33px
+    height 33px
+    .vs-button__content
+      padding: 0px !important
+    i
+      font-size: .95rem
+      margin-right: 0px !important
+      margin-left: 1px !important
+
+
+  &--circle
+    border-radius: 100px
+
+
+  &--circle&--icon
+    border-radius: 50%
+
+  &--square
+    border-radius: 0px
+
+  /*
+    Type
+  */
+
+  &--flat
+    background vs-color('color',.15)
+    color vs-color('color')
+    &:hover
+      background: vs-color('color')
+      color rgb(255,255,255)
+    &:active
+      opacity .8 !important
+
+  &__active&--flat
+    color rgb(255,255,255)
+    background: vs-color('color-darken')
+
+  &--flat&--upload
+    .vs-button__upload
+      &:before
+        opacity .4
+
+
+  &--border
+    background vs-color('color', 0)
+    color vs-color('color')
+    .vs-button__content
+      z-index 1300
+    &:after
+      content ''
+      border 2px solid vs-color('color')
+      position absolute
+      top 0px
+      left 0px
+      z-index 10
+      width: 100%
+      height 100%
+      box-sizing: border-box
+      border-radius: inherit
+      transition: all .25s ease
+
+    &:hover
+      // background: vs-color('color', .1)
+      &:after
+        border 2px solid vs-color('color', .3)
+    &:active
+      color rgb(255,255,255)
+
+
+  &__active&--border
+    color rgb(255,255,255)
+    background: vs-color('color')
+
+  &--ripple&--border
+    color rgb(255,255,255) !important
+    .vs-button__animate
+      color rgb(255,255,255) !important
+
+
+  &--gradient
+    background: vs-color('color-rotate')
+    background-image: linear-gradient(30deg, vs-color('color',1) 33%, vs-color('color-rotate', 0) 100%);
+
+    &:hover
+      transform: translate(0,-3px)
+      box-shadow: 0px 15px 15px -10px vs-color('color',.4)
+      background-image: linear-gradient(30deg, vs-color('color',1) 50%, vs-color('color-rotate', 0) 100%);
+
+
+
+    &:active
+      transform: translate(0px)
+      background-image: linear-gradient(30deg, vs-color('color',1) 0%, vs-color('color-rotate', 0) 100%);
+      box-shadow: 0px 0px 0px -10px vs-color('color',.4)
+
+
+  &__active&--gradient
+    transform: translate(0,-3px)
+    box-shadow: 0px 15px 15px -10px vs-color('color',.4)
+    background-image: linear-gradient(30deg, vs-color('color',1) 60%, vs-color('color-rotate', 0) 100%);
+
+
+  &--transparent
+    background transparent
+    color vs-color('color')
+    &:after
+      content ''
+      position absolute
+      top 0px
+      left 0px
+      z-index 10
+      width: 100%
+      height 100%
+      transform: scale(.75)
+      border-radius: 20px
+      opacity 0
+      transition: all .25s ease, opacity .2s ease
+      background: vs-color('color', .2)
+    &:hover
+      &:after
+        border-radius: inherit
+        opacity 1
+        transform: scale(1)
+
+    &:active
+      &:after
+        transform: scale(.9)
+
+  &__active&--transparent
+    color rgb(255,255,255)
+    &:after
+      border-radius: inherit
+      opacity 1
+      transform: scale(1)
+      background: vs-color('color', 1)
+
+  &--transparent&--loading
+    .vs-button__loading
+      opacity .4
+  &--transparent&--upload
+    .vs-button__upload
+      &:before
+        opacity .3
+
+
+  &--dashed
+    background transparent
+    // border 1px dashed rgb(190,190,190)
+    color rgba(0,0,0,.6)
+    &:after
+      content ''
+      border 1px dashed rgb(190,190,190)
+      position absolute
+      top 0px
+      left 0px
+      z-index 10
+      width: 100%
+      height 100%
+      box-sizing: border-box
+      border-radius: inherit
+      transition: all .25s ease
+    &:hover
+      background: vs-color('color',.04)
+      color: vs-color('color',1)
+      &:after
+        border 1px solid vs-color('color',1)
+    &:active
+      background: vs-color('color',.0)
+      &:after
+        border 1px solid vs-color('color',.5)
+
+  &__active&--dashed
+    &:after
+      border 1px solid vs-color('color', 1)
+
+    color: vs-color('color',1)
+    background: vs-color('color',.15)
+
+  &--dashed&--loading
+    .vs-button__loading
+      opacity .4
+  &--dashed&--upload
+    .vs-button__upload
+      &:before
+        opacity .3
+
+  &--shadow
+    background transparent
+    color vs-color('color',1)
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,.07)
+    &:hover
+      box-shadow: 0px 7px 17px 0px rgba(0,0,0,.09)
+      transform: translate(0,-2px)
+    &:active
+      transform: translate(0,-4px) !important
+      box-shadow: 0px 9px 19px 0px rgba(0,0,0,.12)
+
+  &__active&--shadow
+    box-shadow: 0px 7px 17px 0px rgba(0,0,0,.07)
+    transform: translate(0,-2px)
+
+  &--shadow&--loading
+    .vs-button__loading
+      opacity .4
+  &--shadow&--upload
+    .vs-button__upload
+      &:before
+        opacity .3
+
+  &--relief
+    background transparent
+    color rgb(255,255,255)
+    background: vs-color('color',1)
+    box-shadow: inset 0px -3px 0px 0px vs-color('color-darken',1)
+    .vs-button__content
+      padding-top: $vs-button-padding-y + 1px
+      padding-bottom: $vs-button-padding-y + 3px
+      transition: all .2s ease
+    &:hover
+      background: vs-color('color',.85)
+
+
+    &:active
+      transform: translate(0, 1px)
+      box-shadow: inset 0px 0px 0px 0px vs-color('color-darken',1)
+      .vs-button__content
+        padding-top: $vs-button-padding-y + 2px
+        padding-bottom: $vs-button-padding-y
+
+
+  &__active&--relief
+    transform: translate(0, 1px)
+    box-shadow: inset 0px 0px 0px 0px vs-color('color-darken',1)
+    .vs-button__content
+      padding-top: $vs-button-padding-y + 2px
+      padding-bottom: $vs-button-padding-y
+
+  &--floating
+    background transparent
+    color rgb(255,255,255)
+    background: vs-color('color',1)
+    box-shadow: 0px 10px 20px -7px vs-color('color-darken',1)
+    // box-shadow: 0px 10px 20px -8px rgba(0,0,0,.7)
+    &:hover
+      background: vs-color('color',.85)
+
+    &:active
+      transform: translate(0, 2px)
+      box-shadow: 0px 0px 0px 0px rgba(0,0,0,.3)
+
+  &__active&--floating
+    transform: translate(0, 2px)
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,.3)
+
+
+.vs-button__loading
+  width: 100%
+  height 100%
+  position absolute
+  top 0px
+  left 0px
+  background: vs-color('color-darken',.8)
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: 1200
+  pointer-events: none
+  &:after
+    content ''
+    width: 17px
+    height 17px
+    border: 2px solid rgba(255,255,255,.5)
+    border-top 2px solid rgba(255,255,255, 0)
+    border-bottom 2px solid rgba(255,255,255, 0)
+    border-right: 2px solid rgba(255,255,255, 0)
+    border-radius: 50%
+    position absolute
+    animation: btnload .6s linear infinite
+  &:before
+    position absolute
+    content ''
+    width: 17px
+    height 17px
+    border: 2px solid rgb(255,255,255)
+    border-top 2px solid rgba(255,255,255, 0)
+    border-bottom 2px solid rgba(255,255,255, 0)
+    border-right: 2px solid rgba(255,255,255, 0)
+    border-radius: 50%
+    animation: btnload .6s ease infinite
+
+.vs-button__upload
+  &:before
+    content: ''
+    position absolute
+    width: 100%
+    height 100%
+    background: vs-color('color-darken', .5)
+    top 0px
+    left 0px
+    z-index 1200
+    animation: btnupload .7s ease infinite
+
+@keyframes btnload
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+@keyframes btnupload
+  0%
+    transform: translate(0, 110%)
+  100%
+    transform: translate(0,-110%)
+
+.vs-button__animate
+  position absolute
+  width: 100%
+  height 100%
+  left 0px
+  top 0px
+  display: flex
+  align-items: center
+  justify-content: center
+  color inherit
+  z-index 1400
+
+
+// group
+
+.vs-button-group
+  .vs-button
+    float left
+    border-radius: 0px
+    margin-right: 0px !important
+    margin-left 0px !important
+    &:hover
+      z-index 10
+      + .vs-button
+        z-index 1
+    &.vs-button--border
+      margin-left -2px !important
+    &.vs-button--dashed
+      margin-left -1px !important
+    // &:not(:last-child):not(:first-child)
+    //   &:after
+    //     border-left: 0px
+    &:last-child
+      border-top-right-radius: $vs-button-radius
+      border-bottom-right-radius: $vs-button-radius
+
+    &:first-child
+      border-top-left-radius: $vs-button-radius
+      border-bottom-left-radius: $vs-button-radius

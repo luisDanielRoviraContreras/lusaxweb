@@ -1,0 +1,143 @@
+.vs-card
+  /*
+  * Colores del componente con variables css
+  */
+  --vs-color: vs-var('primary')
+  --vs-text-color: vs-var('color')
+  --vs-color-darken: vs-var('primary')
+  --vs-color-rotate: vs-var('primary')
+
+  border-radius: 20px
+
+  transition: $vs-button-transition
+  position relative
+  display: block
+  background: rgb(255,255,255)
+  box-sizing: border-box
+  overflow hidden
+  max-width 370px
+  display: flex
+  flex-direction: column
+  margin: 10px
+  &:hover
+    box-shadow: 0px 5px 20px -5px rgba(0,0,0,.07)
+    transform: translate(0,-4px)
+
+.vs-card__header
+  display: flex
+  align-items: flex-start
+  justify-content: flex-start
+  padding: 10px
+  position relative
+  z-index 200
+  border-radius: 20px 20px 0px 0px
+  h1,h2,h3,h4,h5,h6
+    padding: 0px
+    font-weight: 600
+  .vs-card__header-text
+    padding: 0px 5px
+    flex-grow: 1
+    p
+      font-size: .8rem
+      opacity .6
+
+.vs-card__media
+  z-index 100
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow hidden
+  position relative
+  max-height: 250px
+  border-radius: 20px
+  width: calc(100% - 20px)
+  margin: 0px 10px
+  margin-top: 10px
+  img
+    position relative
+    display: block
+
+.vs-card__content
+  padding: 10px
+  p
+    font-size: .8rem
+    opacity .7
+    padding: 10px
+
+.vs-card__footer
+  padding: 20px
+  position relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+  &:after
+    content ''
+    position absolute
+    top 0px
+    width: 80%
+    height 1px
+    background: rgba(0,0,0,.04)
+    left 10%
+
+
+// group
+
+.vs-card-media-group
+  position relative
+  max-height: 250px
+  overflow hidden
+  display: flex
+  align-items: center
+  justify-content: center
+  &:hover
+    .vs-card-media-group__icon-next
+      opacity 1
+      pointer-events: auto
+      transform: scale(1)
+  .vs-card-media-group__count
+    position absolute
+    top 0px
+    right 0px
+    margin: 10px
+    z-index 500
+    background: rgba(255,255,255,.4)
+    font-size: .75rem
+    border-radius: 7px
+    padding: 3px 8px
+    font-weight: 600
+    user-select none
+    cursor default
+  .vs-card-media-group__icon-next
+    position absolute
+    bottom: 0px
+    right 0px
+    margin: 10px
+    background: rgba(255,255,255,.4)
+    padding: 3px 8px
+    border-radius: 8px
+    z-index 500
+    opacity 0
+    pointer-events: none
+    cursor pointer
+    transform: scale(.5)
+    transition: all .25s ease
+
+.vs-card-media-group-item
+  cursor pointer
+  user-select: auto
+  transition all .3s ease
+  transform: translate(0)
+  top 0px
+  left 0px
+  z-index 100
+  position relative
+
+.fade-enter-active, .fade-leave-active
+  transition all .3s ease
+
+.fade-enter
+  position absolute
+  transform: translate(100%)
+.fade-leave-to
+  position absolute
+  transform: translate(-100%)

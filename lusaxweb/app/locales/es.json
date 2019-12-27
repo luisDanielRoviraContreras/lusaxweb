@@ -1,0 +1,118 @@
+{
+  "nav":{
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "about": "Nosotros",
+    "contact": "Contáctenos"
+  },
+  "home": {
+    "outstanding": "Destacados",
+    "news": "Noticias",
+    "slide1":[
+      {
+        "name": "Game of Thrones",
+        "text": "Nuevo Premio en Interacción",
+        "key": 0
+      },
+      {
+        "name": "Vuesax Framework",
+        "text": "Framework de Componentes para Vuejs",
+        "key": 1
+      },
+      {
+        "name": "Cyberpunk 2077",
+        "text": "Próximamente en Behance",
+        "key": 2
+      }
+    ],
+    "slide2":[
+      {
+        "name": "Mockui",
+        "text": "Genera Mockups Fácilmente",
+        "key": 0
+      },
+      {
+        "name": "Vuesax 3K",
+        "text": "3k Estrellas en github",
+        "key": 1
+      },
+      {
+        "name": "Instagram",
+        "text": "Instagram Nueva publicación",
+        "key": 2
+      },
+      {
+        "name": "Vuesax",
+        "text": "Vuesax Próximamente v4.0 🎉",
+        "key": 3
+      }
+    ],
+    "title1": "Creamos <br> experiencias",
+    "title2": "Proyectos <br> Únicos",
+    "item1": {
+      "title": "Diseño Responsive",
+      "text": "Logramos interfaces para cualquier dispositivo, amigables con el usuario"
+    },
+    "item2": {
+      "title": "Máxima Adaptabilidad",
+      "text": "Soluciones creativas para todo tipo de proyecto. App, Web, Dashboard, Software"
+    },
+    "item3": {
+      "title": "Estilo",
+      "text": "Captar la esencia en cada proyecto y darle vida."
+    },
+    "view": "Ver Proyectos",
+    "footer": {
+      "social": "Redes",
+      "startup": "Startup",
+      "contact": "Contacto"
+    }
+  },
+  "projects":{
+    "soon": "Próximamente",
+    "view": "Ver Proyecto"
+  },
+  "about":{
+    "next": "Siguiente",
+    "social": "Social",
+    "favorites": {
+      "red": "Red",
+      "color": "Color",
+      "movies": "Peliculas",
+      "games": "Juegos",
+      "series": "Series",
+      "characters": "Personajes",
+      "soundtracks": "Soundtracks"
+    },
+    "titles":{
+      "intro": "Introducción",
+      "hi": "Hola",
+      "specialties": "Especialidades",
+      "awards": "Premios",
+      "favorites": "Favoritos",
+      "family": "Familia <br> en Equipo"
+    },
+    "lusaxweb": {
+      "intro": "Somos una agencia de diseño y desarrollo conformada por un team familiar con proyectos propios por amor a lo que hacemos, creamos soluciones completas. <br> estamos en constante avance en las tres áreas en las que nos complementamos, Diseño Ui Ux, Front end y Back end, vemos a nuestra empresa como la unión de nuestra mayor pasión: crear",
+      "item1": "Estamos en una era moderna y competitiva, por ende es vital una interface de usuario visualmente atractiva fresca añadiendo un plus a tu producto o web, logrando asi que tus usuarios les llegue el mensaje de manera agradable y efectiva"
+    },
+    "manuel": {
+      "intro": "Mi nombre es Manuel Rovira y soy un diseñador web y un diseñador muy apasionado. Siempre trato de hacer cosas diferentes y creativas que cambian lo visto en el diseño.",
+      "item1": "Mis estilos son todos los estilos, ya que no me gusta encasillarme en una sola tendencia o estilo visual me gusta crear sin limites por ello puedo adaptarme con facilidad a cualquier tipo de proyecto buscando el estilo que realmente necesite, tambien me gustan los desafíos, así que creo conceptos en mi tiempo libre, donde puedo expresar toda mi creatividad en interfaces interesantes y experiencias de usuario únicas."
+    },
+    "luis": {
+      "intro": "Programador frontend full stack, con experiencia en tecnologias web como javascript, css y html, creador de frameworks y librerias para la comunidad open source",
+      "item1": "Crear nuevas librerias o frameworks para la comunidad, tengo experiencia y entusiasmo por todo el ecosistema del frontend y mantenerme siempre al dia con nuevas tecnologías"
+    },
+    "luismanuel": {
+      "intro": "Cofundador - Encargado de Tecnología en Lusaxweb, programador back end con varios años de experiencia.",
+      "item1": "Creación de software y nuevos proyectos, Manejo de personal, programación back end"
+    }
+  },
+  "contact":{
+    "message": "Mensaje",
+    "send": "Enviar",
+    "success": "El mensaje se envio <b>Satisfactoriamente</b>, Gracias por contactarnos.",
+    "invalid": "El email no es valido"
+  }
+}

@@ -1,0 +1,108 @@
+.vs-breadcrumb
+  --vs-color: vs-var('primary')
+
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  cursor default
+  padding 5px 10px
+
+  .vs-breadcrumb__divider
+    display: none
+
+
+.vs-breadcrumb-item
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: all .25s ease
+  position relative
+
+  &:last-child
+    .vs-breadcrumb-item__separator
+      display none
+
+  &--disabled
+    opacity .5
+    pointer-events: none
+    cursor default
+
+  &--active
+    &:first-child
+      .vs-breadcrumb-item__content
+        padding: 0px 0px !important
+        padding-left: 14px !important
+    .vs-breadcrumb-item__content
+      color vs-color('color')
+      font-weight: 600
+      padding: 0px 7px
+      opacity 1
+
+
+  &:hover
+    a
+      opacity .7
+
+  a
+    text-decoration: none
+    outline: none
+    cursor pointer
+    transition: all .25s ease
+    color inherit
+
+.vs-breadcrumb-item__content
+  // color rgba(0,0,0,.4)
+  opacity .6
+  transition: padding .25s ease
+  position relative
+  display: block
+
+.vs-breadcrumb-item__separator
+  margin: 0px 9px
+  font-size: 1rem
+  display: flex
+  align-items: center
+  justify-content: center
+
+.vs-breadcrumb-group
+  display: flex
+  align-items: center
+  justify-content: center
+  &:last-child
+    .vs-breadcrumb-item
+      &:last-child
+        .vs-breadcrumb-item__separator
+          display: none !important
+  .vs-breadcrumb-item
+    &--active
+      &:first-child
+        .vs-breadcrumb-item__content
+          padding: 0px 7px !important
+
+    &:last-child
+      .vs-breadcrumb-item__separator
+        display block !important
+.vs-breadcrumb-group__content
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow hidden
+  position relative
+  transition: all .25s ease
+
+.vs-breadcrumb-group__content-hidden
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor pointer
+  &:hover
+    opacity .7
+    .vs-breadcrumb-group__content-hidden__points
+      background: rgba(235,235,235,1)
+
+.vs-breadcrumb-group__content-hidden__points
+      border-radius: 5px
+      padding: 0px 7px
+      transition: all .25s ease
+
+
