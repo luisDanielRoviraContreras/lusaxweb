@@ -16,7 +16,7 @@
     "cross-env": "^5.2.0",
     "dateformat": "^3.0.3",
     "firebase": "^5.9.2",
-    "gsap": "^2.1.1",
+    "gsap": "^3.6.0",
     "hover-effect": "^1.0.0",
     "material-design-icons": "^3.0.1",
     "nuxt": "^2.4.0",
